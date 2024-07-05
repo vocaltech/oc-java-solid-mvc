@@ -1,0 +1,33 @@
+@startuml
+Class Deck
+
+Class Hand
+
+Class Player {
+  -String name;
+}
+
+Class PlayingCard {
+  -boolean faceUp;
+}
+
+enum Rank
+enum Suit
+
+Player -- Hand
+Hand *-- PlayingCard
+PlayingCard -- Rank
+PlayingCard -- Suit
+
+hide Deck fields
+hide Deck methods
+hide Hand fields
+hide Hand methods
+hide Player methods
+hide PlayingCard methods
+hide Rank fields
+hide Rank methods
+hide Suit fields
+hide Suit methods
+
+@enduml
